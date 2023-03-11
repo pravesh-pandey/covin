@@ -2,13 +2,13 @@
 	"name": "convin",
 	"version": "1.0.0",
 	"description": "",
-	"main": "index.js",
+	"main": "app.js",
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
 		"preview": "vite preview",
-		"serve": "nodemon --experimental-modules --es-module-specifier-resolution=node server\\server.js",
+		"serve": "nodemon --experimental-modules --es-module-specifier-resolution=node app.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"keywords": [],
