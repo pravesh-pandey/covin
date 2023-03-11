@@ -4,13 +4,15 @@ import bodyParser from 'body-parser';
 import Bucket from './models/Bucket.js';
 import Card from './models/Card.js';
 import cors from 'cors';
+require('dotenv').config();
 
 const app = express();
 const port = 5000
 app.use(cors());
-
+const secret = process.env.SECRET;
+const user = process.env.USER;
 var promise = mongoose.connect(
-	"mongodb+srv://pravesh:e68eMaIdc1lW8yIO123*)0@cluster.egh7gxf.mongodb.net/?retryWrites=true&w=majority",
+	`mongodb+srv://pravesh:${secret}@cluster.egh7gxf.mongodb.net/?retryWrites=true&w=majority`,
 	{
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
