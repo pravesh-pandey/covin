@@ -25,10 +25,10 @@ const Bucket = () => {
 	}));
 	};
 	async function newCard(id) {
-		// if (!isValidUrl(cardDetails.link)) {
-		// 	alert('Invalid URL');
-		// 	return;
-		//   }
+		if (!isValidUrl(cardDetails.link)) {
+			alert('Invalid URL');
+			return;
+		  }
 		const data = {
 			bucketId: id,
 			name: cardDetails.name,
