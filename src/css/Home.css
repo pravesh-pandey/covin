@@ -1,0 +1,80 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .bucket-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .bucket {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    text-align: center;
+    width: calc(33.33% - 1rem);
+  }
+  .bucket-link {
+    font-size: 20px;
+    color: red;
+  }
+  
+  
+  .bucket:hover {
+    background-color: #ebebeb;
+    cursor: pointer;
+  }
+  
+  .bucket a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.25rem;
+  }
+  
+  .bucket a:hover {
+    text-decoration: underline;
+  }
+  
+  .form-container {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-container label {
+    margin-right: 1rem;
+    font-size: 1.25rem;
+  }
+  
+  .form-container input[type="text"] {
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 1rem;
+  }
+  
+  .form-container button {
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #0077cc;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .form-container button:hover {
+    background-color: #005ea3;
+  }
+  
