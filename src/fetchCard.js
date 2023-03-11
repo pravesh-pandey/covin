@@ -1,6 +1,8 @@
+import dotenv from 'dotenv';
+dotenv.config();
+const BaseUrl = process.env.BaseUrl;
 const fetchCard = async (id) => {
-	const BaseUrl = "http://localhost:5000";
-	const response = await fetch(`/card/${id}`);
+	const response = await fetch(`${BaseUrl}/card/${id}`);
 
 	if (!response.ok) throw new Error(response.statusText);
 	const data = await response.json();

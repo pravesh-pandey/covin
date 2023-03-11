@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import Bucket from "./Bucket";
 import "./css/Home.css";
 
-require('dotenv').config();
-const BaseUrl = process.env.BaseUrl;
+const BaseUrl = "http://localhost:5000";
 
 const Home = () => {
   const [buckets, setBuckets] = useState([]);
@@ -26,8 +25,6 @@ const Home = () => {
 
     const bucket = await response.json();
     setBuckets((buckets) => [...buckets, bucket]);
-    console.log("new bucket created");
-    console.log(bucket);
   }
 
   useEffect(() => {
@@ -39,8 +36,6 @@ const Home = () => {
       setBuckets(buckets);
     }
     fetchBuckets();
-    console.log("fetching buckets");
-    console.log(buckets);
   }, []);
 
   return (

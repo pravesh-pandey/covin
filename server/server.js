@@ -4,11 +4,12 @@ import bodyParser from 'body-parser';
 import Bucket from './models/Bucket.js';
 import Card from './models/Card.js';
 import cors from 'cors';
-require('dotenv').config();
-
-app.use(cors());
+import dotenv from 'dotenv';
+dotenv.config();
 
 const app = express();
+app.use(cors());
+
 const port = process.env.PORT;
 const secret = process.env.SECRET;
 const user = process.env.USER;

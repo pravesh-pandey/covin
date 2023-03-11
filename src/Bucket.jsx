@@ -3,8 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import BucketList from "./BucketList";
 import "./css/Bucket.css";
-require('dotenv').config();
-const BaseUrl = process.env.BaseUrl;
+const BaseUrl = "http://localhost:5000";
 
 const Bucket = () => {
 	const { id } = useParams();
@@ -49,8 +48,6 @@ const Bucket = () => {
 		setBucket((bucket) => {
 			return { ...bucket, cards: [...bucket.cards, card] };
 		});
-		console.log("new card created");
-		console.log(card);
 	}
 	const handleCardSelect = (cardId) => {
 		const index = selectedCards.indexOf(cardId);
@@ -63,7 +60,6 @@ const Bucket = () => {
 		}
 	};
 	async function fetchBucket() {
-		console.log("fetchBucket Called inside Bucket.jsx");
 		const response = await fetch(`${BaseUrl}/bucket/${id}`, {
 			method: "GET",
 		});
@@ -76,8 +72,6 @@ const Bucket = () => {
 	useEffect(() => {
 		fetchBucket();
 	}, []);
-	console.log("bucket page");
-	console.log(bucket);
 
 	return (
 		<div >

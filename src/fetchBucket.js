@@ -1,6 +1,8 @@
+
+const BaseUrl = "http://localhost:5000";
+
 async function fetchBucket (bucketId) {
-	const BaseUrl = "http://localhost:5000";
-	const response = await fetch(`/bucket/${bucketId}`);
+	const response = await fetch(`${BaseUrl}/bucket/${bucketId}`);
 	if (!response.ok) throw new Error(response.statusText);
 	
 	const data = await response.json();

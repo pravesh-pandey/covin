@@ -1,6 +1,5 @@
 import { useState } from "react";
-require('dotenv').config();
-const BaseUrl = process.env.BaseUrl;
+const BaseUrl = "http://localhost:5000";
 const Card = ({ card, handleSelect, selected, bucketId ,onDelete }) => {
   const [loaded, setLoaded] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
