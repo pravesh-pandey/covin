@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 
 const port = process.env.PORT;
-const url = process.env.URL;
+const url = process.env.URL_DB;
 var promise = mongoose.connect(
 	`${url}`,
 	{
