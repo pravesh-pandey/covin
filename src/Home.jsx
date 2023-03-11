@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import Bucket from "./Bucket";
 import "./css/Home.css";
 
-const BaseUrl = "http://localhost:5000";
+require('dotenv').config();
+const BaseUrl = process.env.BaseUrl;
 
 const Home = () => {
   const [buckets, setBuckets] = useState([]);

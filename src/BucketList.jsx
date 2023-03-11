@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-const BaseUrl = "http://localhost:5000";
+require('dotenv').config();
+const BaseUrl = process.env.BaseUrl;
 
 const BucketList = ({setDestbucketId}) => {
   const [buckets, setBuckets] = useState([]);

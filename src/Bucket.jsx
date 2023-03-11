@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import BucketList from "./BucketList";
 import "./css/Bucket.css";
-const BaseUrl = "http://localhost:5000";
+require('dotenv').config();
+const BaseUrl = process.env.BaseUrl;
 
 const Bucket = () => {
 	const { id } = useParams();

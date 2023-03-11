@@ -6,9 +6,10 @@ import Card from './models/Card.js';
 import cors from 'cors';
 require('dotenv').config();
 
-const app = express();
-const port = 5000
 app.use(cors());
+
+const app = express();
+const port = process.env.PORT;
 const secret = process.env.SECRET;
 const user = process.env.USER;
 var promise = mongoose.connect(
