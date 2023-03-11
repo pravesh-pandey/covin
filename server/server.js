@@ -11,10 +11,9 @@ const app = express();
 app.use(cors());
 
 const port = process.env.PORT;
-const secret = process.env.SECRET;
-const user = process.env.USER;
+const url = process.env.URL;
 var promise = mongoose.connect(
-	`mongodb+srv://pravesh:${secret}@cluster.egh7gxf.mongodb.net/?retryWrites=true&w=majority`,
+	`${url}`,
 	{
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
